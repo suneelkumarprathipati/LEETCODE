@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/sort-vowels-in-a-string/">2785. Sort Vowels in a String</a></h2><h3>Medium</h3><hr><div><p>Given a <strong>0-indexed</strong> string <code>s</code>, <strong>permute</strong> <code>s</code> to get a new string <code>t</code> such that:</p>
+<h2><a href="https://leetcode.com/problems/sort-vowels-in-a-string/solution/">2785. Sort Vowels in a String</a></h2><h3>Medium</h3><hr><div><p>Given a <strong>0-indexed</strong> string <code>s</code>, <strong>permute</strong> <code>s</code> to get a new string <code>t</code> such that:</p>
 
 <ul>
 	<li>All consonants remain in their original places. More formally, if there is an index <code>i</code> with <code>0 &lt;= i &lt; s.length</code> such that <code>s[i]</code> is a consonant, then <code>t[i] = s[i]</code>.</li>
