@@ -1,6 +1,6 @@
 class Solution {
     public String destCity(List<List<String>> paths) {
-        HashSet<String> cities = new HashSet<String>();
+        Set<String> cities = new HashSet<String>();
         for ( List<String> path : paths ){
             cities.add(path.get(0));
         }
