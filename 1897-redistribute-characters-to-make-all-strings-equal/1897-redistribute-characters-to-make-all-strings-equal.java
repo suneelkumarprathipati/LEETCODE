@@ -1,23 +1,27 @@
-
-import java.util.*;
-
 class Solution {
     public boolean makeEqual(String[] words) {
-        Map<Character, Integer> counts = new HashMap<>();
-        
-        for (String word : words) {
-            for (char c : word.toCharArray()) {
-                counts.put(c, counts.getOrDefault(c, 0) + 1);
-            }
-        }
-        
-        int n = words.length;
-        for (Map.Entry<Character, Integer> entry : counts.entrySet()) {
-            if (entry.getValue() % n != 0) {
-                return false;
-            }
-        }
-        
-        return true;
+      if (words.length == 1) {
+			return true;
+		}
+		int totalCharCount = 0;
+		for (String s : words) {
+			totalCharCount += s.length();
+		}
+		if (totalCharCount % words.length != 0) {
+			return false;
+		}
+
+		int[] myMap = new int[26];
+		for (String s : words) {
+			for (char c : s.toCharArray()) {
+				myMap[c - 'a']++;
+			}
+		}
+		for (int i : myMap) {
+			if (i % words.length != 0) {
+				return false;
+			}
+		}
+		return true; 
     }
 }
