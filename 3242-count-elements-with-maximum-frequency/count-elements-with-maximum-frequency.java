@@ -1,24 +1,14 @@
-import java.util.*;
 class Solution {
     public int maxFrequencyElements(int[] nums) {
-        int[] arr = new int[nums.length];
-        for ( int i = 0 ; i < nums.length ; i++ ){
-            for ( int j = 0 ; j < nums.length ; j++ ){
-                if ( nums[i] == nums[j] )
-                    arr[i]++;
-            }
-            System.out.print(arr[i]);
+        byte[] freq = new byte[101];
+        byte max = 0, res = 0;
+        for (int n : nums) {
+            byte f = ++freq[n];
+            if (f > max) {
+                max = f; res = f;
+            } else if (f == max) 
+                res += f;
         }
-        int max = 0;
-        for ( int i = 0 ; i < nums.length ; i++ ) {
-            if ( arr[i] > max ) max = arr[i];
-            System.out.print(max);
-        }
-        int count = 0;
-        for ( int i = 0 ; i < nums.length ; i++ ){
-            if ( max == arr[i] ) count++;
-        }
-        System.out.print(count);
-        return count;
+        return res;
     }
 }
